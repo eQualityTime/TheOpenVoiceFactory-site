@@ -1,0 +1,75 @@
+---
+title: "Upload"
+img: "create.png"
+
+---
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+		{% include pageheader.html %}
+<section id="main">
+<!-- Page Content -->
+    <div class="content-section-a">
+<!-- 12:21 --> 
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">{{ page.title }}</h2>
+<div class="lead">
+<p>To make your own communication aid, there are there simple steps. </p>
+<ol>
+<li> Watch our <a href=guides.html>3 minute getting started video</a></li>
+<li> Make some changes to either our  <a href=https://raw.github.com/joereddington/CommuniKate/master/ck12/CK12%2BV2.pptx>CK12 template</a> or <a href=https://raw.githubusercontent.com/joereddington/CommuniKate/master/ck20/CK20V2.pptx>CK20 template</a>. </li>
+<li> Upload your version using the form below. </li>
+</ol>
+<form action="http://testing.theopenvoicefactory.org/upload.php" method="post" enctype="multipart/form-data" class="file-submit">
+  <h3>File to upload</h3>
+<p>The Open Voice Factory is simple.  There are no usernames and no passwords.  Just upload a template and you’ll be given a special link that you can always use to get back to the communication device you created. </p>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <br>
+    <h3>Grid size</h3>
+<p>Please choose the correct grid size for your template. </p>
+    <input type="radio" name="size" value="5" class="size"> 5 wide and 5 tall<br>
+    <br>
+    <input type="radio" name="size" value="4" class="size"> 4 wide and 4 tall<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="button" data-tooltip="Please select a file and a gridsize first!" disabled>Process uploaded file</button>
+</form>
+
+<h3> Notes</h3>
+<p>At  this stage of development, anyone with the correct link will be able to view your files. Please keep this in mind before uploading content that may be private. </p>
+<p>Make sure you test the resulting link thoroughly! There may be lurking bugs in our code and we'd hate for an end-user to be the first ones to find them.</p> 
+</div>
+  <script src="choosevoice.js"></script>
+  <script src="form-validation.js"></script>
+
+</div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/services/{{ page.img }}" alt="">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+</section>
+
+
+ <script src="form-validation.js"></script>
+ {% include contact.html %}
+		{% include footer.html %}
+		{% include js.html %}
+	</body>
+</html>
+

@@ -1,0 +1,57 @@
+---
+layout: default
+img: join.JPG
+category: Main
+title: Credits
+description: |
+---
+
+<a name="join"></a>
+The Open Voice Factory relies on volenteers to do things like test, convert, spot errors, and write documentation.  We want to thank all of these people who've already made a contribution to either this or the CommuniKate project. We really couldn't have done it without out you. 
+
+
+* Paulo Ricca
+* Brian Whitmer
+* David Niemeijer
+* Hugo Pacheco
+* Will Wade
+* Margarida Pinto
+* Ian Foulger
+* Julie Bello
+* Marlene Padrão
+* José Danado
+* André Nascimento
+* Carla Pinto
+* Miguel Bento Alves
+* Laurine Groux-Moreau
+* Maria Hewett
+* Paul Hewett
+* Gemma Eardley
+* Zak Sly
+* Stef Armitage
+* Alison Carpenter
+* Trevor Mobbs
+* Diana Mountain
+* Fil McIntyre
+* Angie McCormac
+* Janet Mayers
+* Katie Clarke
+* Helen Quiller
+* Helen Dixon
+* Tamsin Crothers
+* Megan Hughes
+* Anna Flynn
+* Janet and Michael Williams
+* Joe Reddington
+* Kate McCallum
+* Kirsty McNaught
+* Steve Canny
+* Tom Bamber
+* Ivona Hristova
+* Jaroslav Ryník
+  
+
+We're always looking for more people to make a contribution, particular coders, designers, translators and testers. If you like what we are trying to do, please get in touch. 
+
+
+The Open Voice Factory is an [eQuality Time](http://equalitytime.co.uk/) intervention. 
