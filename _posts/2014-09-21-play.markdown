@@ -3,10 +3,10 @@ layout: default
 img: held.JPG
 category: Intro
 title: Play
+name: play
 description: |
 ---
 
-<a name="play"></a>
 Want to play with the aids that the Open Voice Factory produces?
 
 * [Click here](https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://dl.dropboxusercontent.com/s/oiwfo47fprv3jl4/ck20.obz?dl=1) to use an aid built by uploading the CK20 page set from the [CommuniKate project](http://communikate.equalitytime.co.uk/).

@@ -3,6 +3,7 @@ layout: default
 img: play.JPG
 category: Intro
 title: Create your own.
+name: create
 description: |
 ---
 
@@ -14,4 +15,3 @@ The Open Voice Factory is simple.  There are NO usernames, NO passwords.  Just u
 
 You can try it out right now by going to [our upload page](upload_board.html) and making a start by watching our 60 second getting started video. 
 
-<a name="create"></a>
