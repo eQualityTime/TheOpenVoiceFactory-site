@@ -9,7 +9,7 @@ description: |
 
 Want to play with the aids that the Open Voice Factory produces?
 
-* [Click here](https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/fee55376491dfa3bcad38927b85a758f.obz) to use an aid built by uploading the CK20 page set from the [CommuniKate project](http://communikate.equalitytime.co.uk/).
+* [Click here](https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/525da59342a732b0557204f2d658b273.obz) to use an aid built by uploading the CK20 page set from the [CommuniKate project](http://communikate.equalitytime.co.uk/).
 * [Click here](https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/f01ee966b5cb55650eeaafac6a4ca36d/data/pageset.obz?lang=Alex) to use an aid build by uploading the simpler CK 12 page set.
 
 
