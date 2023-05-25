@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body onload="displayHashFromURL()">
+		{% include pageheader.html %}
+<section id="main">
+<!-- Page Content -->
+
+        <div class="container">
+
+            <div class="row">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">{{ page.title }}</h2>
+<div class="lead">
+{{content}}
+                </div>
+</div>
+
+            </div>
+
+        <!-- /.container -->
+
+    <!-- /.content-section-a -->
+</section>
+
+
+ {% include contact.html %}
+		{% include footer.html %}
+		{% include js.html %}
+	</body>
+</html>
+

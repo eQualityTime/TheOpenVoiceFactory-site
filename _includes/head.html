@@ -25,4 +25,51 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+<script>
+  function replaceText(target, replacement) {
+    var displayResults = document.getElementById("displayresults");
+    var htmlString = displayResults.innerHTML;
+
+    var updatedHtmlString = htmlString.replace(new RegExp(target, "g"), replacement);
+
+    displayResults.innerHTML = updatedHtmlString;
+  }
+
+  function displayHashFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hash = urlParams.get('hash');
+    const filename = urlParams.get('filename');
+    const debugging = urlParams.get('debugging');
+    replaceText("HASH",hash)
+    replaceText("FILENAME",filename)
+    replaceText("DEBUGGING",debugging)
+  }
+
+  // Call the function to display the hash from the URL
+
+function copyUrlToClipboard(url) {
+
+  var tempInput = document.createElement("input");
+  tempInput.value = url;
+
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  alert("URL copied to clipboard, you can now paste it into a browser, but make sure you save it somewhere else as well!");
+}
+
+    function toggleContent() {
+      var content = document.getElementById('content');
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+      } else {
+        content.style.display = 'block';
+      }
+    }
+</script>
+
+
 </head>
