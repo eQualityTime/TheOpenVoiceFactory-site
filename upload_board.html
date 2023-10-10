@@ -21,35 +21,93 @@ img: "create.png"
                     <div class="clearfix"></div>
                     <h2 class="section-heading">{{ page.title }}</h2>
 <div class="lead">
-<p>To make your own communication aid, there are there simple steps. </p>
+<p>To make your own communication aid, there are three steps. </p>
 <ol>
 <li> Watch our <a href=guides.html>3 minute getting started video</a></li>
 <li> Make some changes to either our  <a href=https://raw.github.com/joereddington/CommuniKate/master/ck12/CK12%2BV2.pptx>CK12 template</a> or <a href=https://raw.githubusercontent.com/joereddington/CommuniKate/master/ck20/CK20V2.2.pptx>CK20 template</a>. </li>
 <li> Upload your version using the form below. </li>
 </ol>
-<form action="https://code.theopenvoicefactory.org/webinterface/upload.php" method="post" enctype="multipart/form-data" class="file-submit">
+<form action="https://code.theopenvoicefactory.org/webinterface/upload.php" method="post" enctype="multipart/form-data" class="file-submit" id="uploadForm">
+  <fieldset>
+      <legend>Upload Form</legend>
   <h3>File to upload</h3>
 <p>The Open Voice Factory is simple.  There are no usernames and no passwords.  Just upload a template and you’ll be given a special link that you can always use to get back to the communication device you created. </p>
-    <input type="file" name="fileToUpload" accept=".pptx" id="fileToUpload">
+
+    <input type="file" name="fileToUpload" accept=".pptx" id="fileToUpload" required>
     <br>
     <h3>Grid size</h3>
 <p>Please choose the correct grid size for your template. </p>
-    <input type="radio" name="size" value="5" class="size"> 5 wide and 5 tall (for CK20 pagesets)<br>
+
+    <label>
+        <input type="radio" name="size" value="5" class="size" required>
+        5 wide and 5 tall
+    </label>
     <br>
-    <input type="radio" name="size" value="4" class="size"> 4 wide and 4 tall (for CK12 pagesets)<br>
+    <label>
+        <input type="radio" name="size" value="4" class="size">
+        4 wide and 4 tall
+    </label>
     <br>
+    <progress id="uploadProgress" value="0" max="100"></progress> <!-- Progress bar -->
     <br>
-    <br>
-    <br>
-    <button class="button" data-tooltip="Please select a file and a gridsize first!" disabled>Process uploaded file</button>
+    <div id="status"></div>
+    <button class="button" type="submit" data-tooltip="Please select a file and a grid size first!">Process uploaded file</button>
+</fieldset>
+
 </form>
 
 <h3> Notes</h3>
 <p>At  this stage of development, anyone with the correct link will be able to view your files. Please keep this in mind before uploading content that may be private. </p>
 <p>Make sure you test the resulting link thoroughly! There may be lurking bugs in our code and we'd hate for an end-user to be the first ones to find them.</p> 
 </div>
-  <script src="choosevoice.js"></script>
-  <script src="form-validation.js"></script>
+  <script>
+
+
+        document.getElementById('uploadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var form = e.target;
+            var formData = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            document.getElementById('status').textContent="Uploading"; 
+            xhr.upload.addEventListener('progress', function (e) {
+                if (e.lengthComputable) {
+                    console.log("Here");
+                    var percentComplete = (e.loaded / e.total) * 100;
+                    document.getElementById('uploadProgress').value = percentComplete;
+                }
+            });
+
+            xhr.addEventListener('load', function () {
+                if (xhr.status == 200) {
+                    // Handle success actions here
+                    document.getElementById('status').textContent="Uploaded and processing"; 
+                    document.getElementById('uploadForm').submit();
+                } else {
+                    document.getElementById('status').textContent="Upload failed"; 
+                    // Handle error actions here
+                }
+            });
+
+            xhr.send(formData);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 
 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
